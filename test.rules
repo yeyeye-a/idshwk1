@@ -1,1 +1,1 @@
-alert tcp any any -> any 8080 (msg:"TEST ALERT";content:"I|20|am|20|IDS|20|Homework|20|I";offset:100;depth:100;flags:A;sid:1)
+alert tcp $EXTERNAL_NET any -> $HOME_NET 8080 (msg: "TEST ALERT"; flags: A; content: "I am IDS Homework I"; offset: 100; depth: 100; sid: 114514)
